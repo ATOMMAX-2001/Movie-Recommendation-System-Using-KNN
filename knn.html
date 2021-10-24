@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+    AUTHOR:S.ABILASH    
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="knn.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="PapaParse-5.0.2/papaparse.min.js"></script>
+    <title>MLT ASSIGNMENT</title>
+</head>
+<style>
+  canvas{
+        width:100%;
+        max-width:700px;
+        background-color: #333333;
+        margin-left:2%;
+        margin-top:2%;
+    }
+    input{
+        position: relative;
+        margin-top:1%;
+    }  
+    button{
+        margin-top:1%;
+    }
+    table{
+        margin-left: 25%;
+        margin-top: 1%;
+    }
+    table,th,td{
+        border: 2px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    .movie-class{
+        width:90%;
+        padding: 5px;
+        font-size:15px;
+        margin-bottom: 15%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .submit-button{
+        width:20%;
+        padding:5px;
+        font-size: 15px;
+        font-family: monospace;
+        position: relative;
+        top:-11rem;
+    }
+    .results{
+         margin-top: -10%;
+         margin-left:38%;
+    }
+ 
+</style>
+<body onload=loadDataset()>
+    <center>
+        <h1 class="ass-title">MLT ASSIGNMENT</h1>
+        <h2 class="topic-title">KNN Algorithm</h3>
+        <h4>~ S.ABILASH</h4>
+        <form>
+            <input type="range" name="k-values" id="k-range" min="0" max="15" style="width: 25%;">
+            <br><span>k-Value:<p id="k-no"></p></span>
+        </form>    
+
+        <canvas id="myChart"></canvas>
+    </center>
+   <div>
+       <h2>Movie Recommendation System:</h2>
+       <center><input class="movie-class" type="text" name="movie-search" id="movie-search-id" placeholder="Enter Movie Name"></center>
+       <center><button type="button" class="submit-button" onclick="parseCsv()">Submit</button></center> 
+   </div>
+   <div id="results">
+       
+   </div>
+   <div id="parsed_data">
+
+   </div>
+
+</body>
+<script src="knn.js"></script>
+</html>
