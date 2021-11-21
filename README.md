@@ -10,4 +10,4 @@
 
 
 ## Just Run It On a Server
- <a href="abilash-mlt-assignment.netlify.app/knn.html">CLICK HERE!!</a>
+ <a href="https://abilash-mlt-assignment.netlify.app/knn.html">CLICK HERE!!</a>
